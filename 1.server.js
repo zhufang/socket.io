@@ -1,7 +1,8 @@
 var express=require('express');
 var path=require('path');
 var app=express();
-
+//使用这个中间件以后，此中间件原理是去public目录下，找找有没有这个文件，如果有则读出来返回给客户端，如果没有则 next
+app.use()
 //当客户端访问'/'的时候，返回一个index.html文件
 app.get('/',function (req,res) {
     //从当前路径出发向下找 找一个绝对路径

@@ -3,11 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 </head>
-<body>
+<body style="margin-top:20px">
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3>欢迎来到朱芳芳的聊天室</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">欢迎来到朱芳芳的聊天室</li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="content" id="content">
+                        </div>
+                        <div class="col-md-2">
+                            <hutton class="btn btn-primary btn-md" type="button">发言</hutton>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 <script src="/socket.io/socket.io.js"></script>
 <script>
     //通过引入这个脚本后会在window下增加一个io的全局变量，通过调用它并传入路径可以连接socket.io服务器
+    // / 代表当前路径
     var socket = io('/');
     socket.on('connect',function () {
         console.log('连接服务器成功');
